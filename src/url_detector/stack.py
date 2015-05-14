@@ -31,5 +31,4 @@ class Stack():
     def clear(self):
         while(self.top != -1):
             self.stack.pop();
-            self.top=self.top-1;            
-        
+            self.top=self.top-1; 
