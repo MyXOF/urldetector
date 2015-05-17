@@ -5,7 +5,7 @@ state = url_dfa.states[0]  # the current state
 result = []        # the detected URLs
 quality_url_stack = Stack(4096)
 
-with open('test1.html', 'rb') as f:
+with open('test.html', 'rb') as f:
     #input_str = f.readline()
     for input_str in f:
         for content in input_str:
@@ -38,13 +38,15 @@ with open('test1.html', 'rb') as f:
                         continue
                 state = t['err']                
 f.close()
-for url in result:
-    print url
+#for url in result:
+#    print url
 
 if len(result) == 0 :
     print "No quality URL!"
 else:
     with open('test.txt', 'wb') as f:
         f.write('\n'.join(result))   
+    output_info = 'Parse successfully! '+str(len(result))+' URL write into \'test.txt\''
+    print output_info
     f.close()
 

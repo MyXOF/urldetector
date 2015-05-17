@@ -26,10 +26,9 @@ __domain_special_letter__ = '-';
 __domain_separator__ = '.';
 __port_letter__ = ':';
 __param_begin__ = '/';
-__param_special_type__ = ['=','-',' ','.','?',
-                          '%','&','+','<','>',
-                          '_','@','#','$','^',
-                          '*','/'];
+__param_special_type__ = ['=','-','.','?','\\',
+                          '%','&','+','_','@',
+                          '#','$','^','*','/'];
 
 '''
     transition and match rules
